@@ -23,3 +23,13 @@ const buyMore = (x) => {
   buyApple(x - 10);
 };
 buyApple(money);
+
+// Head and tail recursion
+let data = 5;
+const test = (x) => {
+  // console.log(x) head recursion
+  test(x - 1);
+  // console.log(x) tail recursion
+};
+
+test(data);
