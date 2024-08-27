@@ -14,7 +14,7 @@ const buyApple = (x) => {
   if (x < 0) {
     console.log("i dont have money");
   } else {
-    console.log("I have", totalApple, "apple and", x, "money");
+    // console.log("I have", totalApple, "apple and", x, "money");
     buyMore(x);
   }
 };
@@ -33,3 +33,18 @@ const test = (x) => {
 };
 
 test(data);
+
+// Reverse array usimg recursion
+const arr1 = [12, 21, 5, 22, 51, 23];
+let temp;
+const customReverse = (data, start, end) => {
+  if (start <= end) {
+    temp = data[start];
+    data[start] = data[end];
+    data[end] = temp;
+    customReverse(data, start + 1, end - 1);
+  }
+};
+
+customReverse(arr1, 0, arr1.length - 1);
+console.log(arr1);
